@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/ipBlock.css">   
+</head>
+<body ng-controller="myController">   
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12 col-xs-12 designHeader"><div class="col-md-2 col-xs-2 iconAlign"><span class="	glyphicon glyphicon-user" aria-hidden="true"></span></div><div class="col-md-7 col-xs-7">FREE SHIPPING ON ORDERS OVER $150</div> <div class="col-md-3 col-xs-3"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><input class="searchAlign" placeholder="Search..."></div></div>
+    </div>
+</div>
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">ARTICLE</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">BRANDS<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Wrangler</a></li>
+            <li><a href="#">Pepe Jeans</a></li>
+            <li><a href="#">Flying machine</a></li>
+            <li><a href="#">Levis</a></li>
+          </ul>
+       </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">DEPARTMENTS<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">T shirts</a></li>
+            <li><a href="#">Jeans</a></li>           
+          </ul>
+        </li>
+        <li><a href="#">JOURNAL</a></li>
+        <li><a href="#">CONTACT</a></li>
+          <li><a href="#" data-toggle="dropdown"><span style="font-size: larger;" class="glyphicon glyphicon-shopping-cart"></span><span class="badge badgeColorGreen" ng-cloak>{{numberOfItemInCart}}</span><span class="badge badgeColorRed" ng-cloak>{{numberOfFavouriteItemInCart}}</span></a>
+           <ul class="dropdown-menu" ng-class="{'displayNone' : numberOfFavouriteItemInCart === 0 && numberOfItemInCart === 0}" id="myCart">                    <li><div class="goToCart"><button class="btn btn-warning">GO TO CART</button></div></li>
+          </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<img src="../img/store-984393_1920.jpg" style=" width: 100%;height: 550px;" alt="store">
+<section class="container-fluid">
+<div class="row">
+<div class="col-md-6 addColor">
+    <div>THEY'RE BACK -- VELVA SHEEN ROLLED TEES</div>
+    <div style="font-size:30px;line-height:.6;">&#x2015;</div>
+    <p>Shop a Cincinnati original. Velva Sheen Tees - tubular knit, crew neck, multiple colors. Restock the T-shirt drawer with your favorite item.Limited quantities</p>
+    <button type="button" class="btn btnCss">SHOP NOW</button>
+</div>
+<div class="col-md-6" style="background:#211d1d"><img style="width:100%;height: 354px;" src="../img/tshirt.jpg" alt="tshirt"></div>
+</div>
+</section>
+<div class="container textAlignCss">
+ <div class="alert-box success succesAddCart">Successfully Added To Cart</div>
+ <div class="alert-box success succesAddFav">Successfully Added To Favourite</div>
+<div class="row" style="margin-bottom: 20px;"><div><strong style="color:#888080;letter-spacing:1px;font-family: monospace;">NEW FOR FALL</strong></div><div style="font-size:30px;line-height:.6;color:#ccc;">&#x2015;</div></div>
+<div class="row">   
+  
+    <div class="col-md-3 col-sm-6"><div class="overlay"><img class="imageCss onHover" src="../img/shirt1.jpg" alt="shirt1"><div class="onImgHoverEffect"><div style="padding-top:113px;"><button class="btn btn-warning shirtBuy" ng-click="addToCart()">ADD TO CART<i class="fa fa-cart-arrow-down cartColor" aria-hidden="true"></i></button></div><div><button class="btn btn-warning shirtFav" ng-click="addFavouriteToCart()">ADD AS FAVOURITE<i class="fa fa-heart heartColor" aria-hidden="true"></i></button></div></div></div><p class="marginParaCss onHover"><i>DHFBJHBDFJ FBDHGFDHGHI KDJBFGDFGBJBFD</i></p></div>
+    
+<div class="col-md-3 col-sm-6"><div class="overlay"><img class="imageCss onHover" src="../img/shirt2.jpg" alt="shirt2"><div class="onImgHoverEffect"><div style="padding-top:113px;"><button class="btn btn-warning shirtBuy" ng-click="addToCart()">ADD TO CART<i class="fa fa-cart-arrow-down cartColor" aria-hidden="true"></i></button></div><div><button class="btn btn-warning shirtFav" ng-click="addFavouriteToCart()">ADD AS FAVOURITE<i class="fa fa-heart heartColor" aria-hidden="true"></i></button></div></div></div><p class="marginParaCss onHover"><i>BDFBDFBDFBDFB KJDFNGKDF JDFNGKJNFDKJG</i></div>
+
+<div class="col-md-3 col-sm-6"><div class="overlay"><img class="imageCss onHover" src="../img/shirt3.jpg" alt="shirt3"><div class="onImgHoverEffect"><div style="padding-top:113px;"><button class="btn btn-warning shirtBuy" ng-click="addToCart()">ADD TO CART<i class="fa fa-cart-arrow-down cartColor" aria-hidden="true"></i></button></div><div><button class="btn btn-warning shirtFav" ng-click="addFavouriteToCart()">ADD AS FAVOURITE<i class="fa fa-heart heartColor" aria-hidden="true"></i></button></div></div></div><p class="marginParaCss onHover"><i>NKJNDSHFSDF JHBSDJGFYUE NTRWTTFQVD</i></div>
+
+<div class="col-md-3 col-sm-6"><div class="overlay"><img class="imageCss onHover" src="../img/shirt4.jpg" alt="shirt4"><div class="onImgHoverEffect"><div style="padding-top:113px;"><button class="btn btn-warning shirtBuy" ng-click="addToCart()">ADD TO CART<i class="fa fa-cart-arrow-down cartColor" aria-hidden="true"></i></button></div><div><button class="btn btn-warning shirtFav" ng-click="addFavouriteToCart()">ADD AS FAVOURITE<i class="fa fa-heart heartColor" aria-hidden="true"></i></button></div></div></div><p class="marginParaCss onHover"><i>QWSDFGHN MPOIUYTR VHGDVBNM</i></p></div>
+</div>
+<div class="row">
+<div class="col-md-3 col-sm-6"><div class="overlay"><img class="imageCss onHover" src="../img/shirt5.jpg" alt="shirt5"><div class="onImgHoverEffect"><div style="padding-top:113px;"><button class="btn btn-warning shirtBuy" ng-click="addToCart()">ADD TO CART<i class="fa fa-cart-arrow-down cartColor" aria-hidden="true"></i></button></div><div><button class="btn btn-warning shirtFav" ng-click="addFavouriteToCart()">ADD AS FAVOURITE<i class="fa fa-heart heartColor" aria-hidden="true"></i></button></div></div></div><p class="marginParaCss onHover"><i>FDFGHHGFGHGF VBBVBNBV WEREWERT</i></p></div>
+
+<div class="col-md-3 col-sm-6"><div class="overlay"><img class="imageCss onHover" src="../img/shirt6.jpg" alt="shirt6"><div class="onImgHoverEffect"><div style="padding-top:113px;"><button class="btn btn-warning shirtBuy" ng-click="addToCart()">ADD TO CART<i class="fa fa-cart-arrow-down cartColor" aria-hidden="true"></i></button></div><div><button class="btn btn-warning shirtFav" ng-click="addFavouriteToCart()">ADD AS FAVOURITE<i class="fa fa-heart heartColor" aria-hidden="true"></i></button></div></div></div><p class="marginParaCss onHover"><i>LKJHGFM NBVIUYT PLKNXD</i></p></div>
+
+<div class="col-md-3 col-sm-6"><div class="overlay"><img class="imageCss onHover" src="../img/shirt7.jpg" alt="shirt7"><div class="onImgHoverEffect"><div style="padding-top:113px;"><button class="btn btn-warning shirtBuy" ng-click="addToCart()">ADD TO CART<i class="fa fa-cart-arrow-down cartColor" aria-hidden="true"></i></button></div><div><button class="btn btn-warning shirtFav" ng-click="addFavouriteToCart()">ADD AS FAVOURITE<i class="fa fa-heart heartColor" aria-hidden="true"></i></button></div></div></div><p class="marginParaCss onHover"><i>FGHDDF SFGFDGB DGFGESV</i></p></div>
+
+<div class="col-md-3 col-sm-6"><div class="overlay"><img class="imageCss onHover" src="../img/shirt8.jpg" alt="shirt8"><div class="onImgHoverEffect"><div style="padding-top:113px;"><button class="btn btn-warning shirtBuy" ng-click="addToCart()">ADD TO CART<i class="fa fa-cart-arrow-down cartColor" aria-hidden="true"></i></button></div><div><button class="btn btn-warning shirtFav" ng-click="addFavouriteToCart()">ADD AS FAVOURITE<i class="fa fa-heart heartColor" aria-hidden="true"></i></button></div></div></div><p class="marginParaCss onHover"><i>ERGFBDTGH YJGHSFGS SRESRG</i></p></div>
+</div>
+</div>
+<section class="container-fluid">
+<div class="row">
+<div class="col-md-6" style="padding:0px;"><img style="width:100%;height: 354px;" src="../img/footerShirt.jpg" alt="tshirt"></div>
+<div class="col-md-6 addColor">
+<div>LOOKING BACK ON 4 YEARS</div>
+<div style="font-size:30px;line-height:.6;">&#x2015;</div>
+<p>Same mission as ever. Inspire confidence,creativity and color in our fellow man, and improve our corner of the world. Today we celebrate 4 years of Article.</p>
+<button type="button" class="btn btnCss">READ MORE</button>
+</div>
+</div>
+</section>
+<section class="container-fluid" style="background-color:#f3f3f3;">
+    <div class="row" style="margin-top: 65px;font-family: monospace;">
+    <div class="col-md-6 col-md-offset-3"><strong style="color:#888080;letter-spacing: 1px;">NEWSLETTER</strong><hr style="margin-top:5px;border-top:1px solid #676464"/></div>   
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 footerTxt">
+            Subscribe to get special offers, free giveaways,free giveaways,and once-in-a-lifetime deals.
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <input type="text" class="subscribeArea" placeholder="your.email@example.com">
+            <button class="form-control subscribeBtn">SUBSCRIBE</button>
+        </div> 
+    </div>
+    <div class="row footerArticle">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-2">&#169;ARTICLE 2017</div>
+            <div class="col-md-2">RETURNS & EXCHANGES</div>
+            <div class="col-md-2">TERMS OF SERVICE</div>
+            <div class="col-md-2">PRIVACY</div>
+            <div class="col-md-2">CONTACT</div>
+            <div class="col-md-2">ABOUT</div>
+        </div>   
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 iconAlignFooter"><a href="#"><i class="fa fa-facebook paddingIcon" aria-hidden="true"></i></a><a href="#"><i class="fa fa-instagram paddingIcon" aria-hidden="true"></i></a></div>   
+    </div>
+</section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="../js/ipBlock.js"></script>
+</body>
+</html>
